@@ -1,0 +1,33 @@
+import synonyms
+
+print(synonyms.seg("中文近义词工具包"))
+
+listNLP=[
+    "这是第一个句子哦",
+    "你看看我是不是最好看的人",
+    "你想成为rapstar嘛？",
+    "变量a和变量b交换位置",
+    "软工中心门户程序网站",
+    "我今天吃了三百斤的肉包子",
+    "这个程序的功能是制造强力冲击",
+    "测试变量x的值",
+    "参数a，参数b 加上参数2，到底哪个是真的参数呢？ 我希望Synonyms帮帮我！嘿嘿",
+    "",
+    "",
+    "",
+    "",
+    ""
+]
+
+for s in listNLP :
+
+    list = synonyms.seg(s)[0]
+    print(synonyms.seg(s))
+    print("")
+
+    str = ""
+
+    for s in range(len(list)):
+        print(list[s], synonyms.nearby(list[s]))
+
+    print("====================")
